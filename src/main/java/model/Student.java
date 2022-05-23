@@ -1,31 +1,34 @@
 package model;
 
-class Student {
-    private String name;
-    private int id;
-    private String email;
+import java.util.UUID;
 
-    Student (String name, int id, String email) {
+public class Student {
+    private String name;
+    private String id;
+
+    public Student(String name) {
         this.name = name;
-        this.id = id;
-        this.email = email;
+        this.id = UUID.randomUUID().toString();
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getId() {
+    public String getId() {
         return id;
     }
 
-    String getEmail() {
-        return email;
-    }
-
+    @Override
     public String toString() {
-        return name + " " + id + " " + email;
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
     }
 
+    //    public String toString() {
+//        return name + " " + id + " " + email;
+//    }
 
 }
