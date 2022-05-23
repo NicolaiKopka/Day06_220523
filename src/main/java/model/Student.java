@@ -1,7 +1,15 @@
+package model;
+
 class Student {
     private String name;
     private int id;
     private String email;
+
+    Student (String name, int id, String email) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
+    }
 
     String getName() {
         return name;
@@ -15,15 +23,9 @@ class Student {
         return email;
     }
 
-    void setName(String name) {
-        this.name = name;
+    public String toString() {
+        return name + " " + id + " " + email;
     }
 
-    void setId(int id) {
-        this.id = id;
-    }
 
-    void setEmail(String email) {
-        this.email = email;
-    }
 }
